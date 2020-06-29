@@ -11,6 +11,8 @@ def Initialize(self):
     
 def ThreeBarHandler(self, sender, bar):
     # With hourly data the bar period is 3-hours
+    # the "sender" parameter is the consolidator object to which ThreeBarHandler is registered to,
+    # in this case, the "threeCountConsolidator" created in Initialize
     self.Debug(str(bar.EndTime - bar.Time) + " " + bar.ToString())
 </pre>
 <pre class="csharp">
